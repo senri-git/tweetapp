@@ -1,0 +1,24 @@
+
+<!--buttonスタイルを整える-->
+<button id="twitter" class="btn" style="background-color:#00aced; color:white;" type="button"><i class="fab fa-twitter"></i> Tweet</button>
+
+<input type="text" id="content">
+<script>
+  // twitter共有機能
+        document.getElementById("twitter").addEventListener('click', function(event) {
+        event.preventDefault();
+        var left = Math.round(window.screen.width / 2 - 275);
+        var top = (window.screen.height > 420) ? Math.round(window.screen.height / 2 - 210) : 0;
+        window.open(
+            "https://twitter.com/intent/tweet?text=" + encodeURIComponent(document.getElementById("content").value),
+            null,
+            "scrollbars=yes,resizable=yes,toolbar=no,location=yes,width=550,height=420,left=" + left + ",top=" + top);
+    });
+
+</script>
+
+<!--bootstrap導入-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"></script>
